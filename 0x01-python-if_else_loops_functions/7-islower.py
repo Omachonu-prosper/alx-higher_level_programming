@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 
 def islower(c):
     ascii_of_c = ord(c)
