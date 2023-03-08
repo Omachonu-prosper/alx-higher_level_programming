@@ -11,5 +11,5 @@ def pow(a, b):
 
     if b < 0:
         return (1 / current_value)
-        
+
     return current_value
