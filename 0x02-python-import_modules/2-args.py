@@ -6,7 +6,7 @@ import sys
 def print_args():
     argv = sys.argv
     argv_count = len(argv) - 1
-    arg_or_args = "argument" if argv_count == 1 else "argments"
+    arg_or_args = "argument" if argv_count == 1 else "arguments"
     end_of_line = "." if argv_count == 0 else ":"
 
     print(
