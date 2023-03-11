@@ -2,6 +2,7 @@
 
 import sys
 
+
 def infinite_add():
     result_of_addition = 0
 
