@@ -1,5 +1,15 @@
 #!/usr/bin/python3
 
+"""Creates a new square class.
+
+This new class has more features than the previous classes.
+- It raises a TypeError if the size of the square is not an
+  integer and a ValueError if the size of the integer is negative
+
+Typical usage example:
+    square = Square()
+"""
+
 
 class Square:
     """
