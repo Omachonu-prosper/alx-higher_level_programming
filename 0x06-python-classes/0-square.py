@@ -4,6 +4,7 @@
 Creates an empty class
 """
 
+
 class Square:
     """
     empty class for Square
