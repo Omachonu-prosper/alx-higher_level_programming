@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+Creates a new square class
+"""
+
 
 class Square:
     """
