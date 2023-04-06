@@ -20,11 +20,7 @@ class Rectangle:
         self.__height = height
 
     def __str__(self):
-        str_representation = ''
-        for i in range(self.__height):
-            str_representation += ('#' * self.__width) + '\n'
-
-        return str_representation
+        return '/'.join('#' * self.__width for i in range(self.__height))
 
     @property
     def width(self):
