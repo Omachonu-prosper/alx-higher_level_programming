@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Creates a square class suitable for export."""
+
 
 class Square:
     """

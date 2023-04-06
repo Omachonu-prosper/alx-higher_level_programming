@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 
+"""Creates a new square class.
+
+This new class has more features than the previous classes.
+
+Typical usage example:
+    import 4-square
+"""
+
 
 class Square:
     """

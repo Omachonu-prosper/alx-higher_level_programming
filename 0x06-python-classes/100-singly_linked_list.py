@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""Creates a Node class for a singly linked list
+"""
+
 
 class Node:
     """
