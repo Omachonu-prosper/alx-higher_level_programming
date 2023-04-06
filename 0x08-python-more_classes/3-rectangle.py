@@ -3,8 +3,8 @@
 """Creates a rectangle class with height and width attributes.
 
 Example usage:
-    import 2-rectangle as rectangle
-    rectangle2 = rectangle.Rectangle()
+    import 3-rectangle as rectangle
+    rectangle3 = rectangle.Rectangle()
 """
 
 
@@ -18,6 +18,13 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
+
+    def __str__(self):
+        str_representation = ''
+        for i in range(self.__height):
+            str_representation += ('#' * self.__width) + '\n'
+
+        return str_representation
 
     @property
     def width(self):
