@@ -20,7 +20,7 @@ class Rectangle:
         self.__height = height
 
     def __str__(self):
-        return '/'.join('#' * self.__width for i in range(self.__height))
+        return '\n'.join('#' * self.__width for i in range(self.__height))
 
     @property
     def width(self):
