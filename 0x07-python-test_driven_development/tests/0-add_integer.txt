@@ -1,0 +1,40 @@
+===================================
+Documentation for 0-add_integer.py
+===================================
+
+This library contains a function ``add_integer()``
+Which adds two values together
+The function accepts two arguements ``(a, b)``
+``a`` and ``b`` must be either an integer or a float
+and must be converted to an integer before addition if either is a float
+
+Import the function we need
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Case: ``a`` and ``b`` are positive
+    >>> add_integer(1, 2)
+    3
+
+Case: ``a`` is positive and ``b`` is negative
+    >>> add_integer(1, -2)
+    -1
+
+Case: ``a`` and ``b`` are negative
+    >>> add_integer(-1, -2)
+    -3
+
+Case: ``a`` is a float (ps: The function converts floats to integers before addition)
+    >>> add_integer(1.5, 2)
+    3
+
+Case: ``a`` is a string
+    >>> add_integer('d', 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Case: ``b`` is a boolean
+    >>> add_integer(1, True)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
