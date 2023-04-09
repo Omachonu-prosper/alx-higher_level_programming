@@ -38,3 +38,13 @@ Case: ``b`` is a boolean
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+Case: only one arguement passed (``b`` has a default value of 98)
+    >>> add_integer(2)
+    100
+
+Case: No arguements passed
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
