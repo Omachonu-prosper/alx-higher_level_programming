@@ -1,0 +1,35 @@
+===================================
+Documentation for 4-print_square.py
+===================================
+
+The function takes one arguement ``size`` wich must be an integer greater than or equal to 0
+
+Import the needed module
+>>> print_square = __import__('4-print_square').print_square
+
+Case: size is 4
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Case: size is 0
+    >>> print_square(0)
+
+Case: size is -4
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be >= 0
+
+Case: size is 4.5
+    >>> print_square(4.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Case: size is '4'
+    >>> print_square('4')
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
