@@ -18,6 +18,7 @@ Case: size is 0
     >>> print_square(0)
 
 Case: size is -4
+    >>> print_square(-4)
     Traceback (most recent call last):
         ...
     TypeError: size must be >= 0
@@ -33,3 +34,9 @@ Case: size is '4'
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+Case: size is not given
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
