@@ -29,10 +29,9 @@ def matrix_divided(matrix, div):
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
     [[1, 2, 3], [4, 5, 6]]
     """
-    if type(matrix) is not list or len(matrix) is 0:
-        raise TypeError(
-            'matrix must be a matrix (list of lists) of integers/floats'
-            )
+    mat_error = 'matrix must be a matrix (list of lists) of integers/floats'
+    if type(matrix) is not list or len(matrix) == 0:
+        raise TypeError(mat_error)
 
     if div is None or not (type(div) is int or type(div) is float):
         raise TypeError('div must be a number')
@@ -50,10 +49,7 @@ def matrix_divided(matrix, div):
         new_row = []
         for i in row:
             if i is None or not (type(i) is int or type(i) is float):
-                raise TypeError(
-                    'matrix must be a matrix \
-                    (list of lists) of integers/floats'
-                    )
+                raise TypeError(mat_error)
 
             new_row.append(round(i / div, 2))
         new_matrix.append(new_row)
