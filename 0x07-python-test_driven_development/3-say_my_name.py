@@ -8,12 +8,12 @@ First name and last name must be strings
 
 def say_my_name(first_name, last_name=""):
     """Prints out given name in specific format.
-    
+
     First name and last name must be strings
-    
+
     Example input:
     >>> say_my_name("John", "Smith")
-    
+
     Example output:
     My name is John Smith
     """
