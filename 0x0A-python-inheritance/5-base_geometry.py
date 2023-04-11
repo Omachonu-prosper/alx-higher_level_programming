@@ -4,4 +4,5 @@
 
 
 class BaseGeometry:
+    """Base class that other geometry related modules inherit from."""
     pass
