@@ -16,7 +16,10 @@ class Student:
         attributes = vars(self)
         filtered_attrs = {}
 
-        if type(attrs) is list and type(attrs[0]) is str:
+        if type(attrs) is list:
+            if len(attrs) < 1:
+                return attributes
+
             for i in attrs:
                 if type(i) is not str:
                     return attributes
