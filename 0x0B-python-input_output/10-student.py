@@ -18,7 +18,7 @@ class Student:
 
         if type(attrs) is list:
             if len(attrs) < 1:
-                return attributes
+                return filtered_attrs
 
             for i in attrs:
                 if type(i) is not str:
