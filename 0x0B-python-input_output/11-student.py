@@ -30,14 +30,5 @@ class Student:
         return attributes
 
     def reload_from_json(self, json):
-        json_keys = []
-        json_vals = []
-
-        for i in json.keys():
-            json_keys.append(i)
-
-        for i in json.values():
-            json_vals.append(i)
-
-        for i in range(len(json_keys)):
-            self.i = json_vals[i]
+        for key, val in json.items():
+            self.key = val
