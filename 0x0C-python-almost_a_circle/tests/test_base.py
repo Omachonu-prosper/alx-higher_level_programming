@@ -20,6 +20,13 @@ class TestBase(unittest.TestCase):
         self.assertEqual(self.base2.id, 10)
         self.assertEqual(self.base3.id, 2)
 
+    def test_to_json_string(self):
+        dictionary = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
+        self.assertEqual(type(dictionary), dict)
+
+        json_dictionary = Base.to_json_string(dictionary)
+        self.assertEqual(type(json_dictionary), str)
+
     def teatDown(self):
         del self.base1
         del self.base2
