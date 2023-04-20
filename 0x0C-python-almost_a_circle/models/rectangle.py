@@ -71,10 +71,14 @@ class Rectangle(Base):
 
     def display(self):
         """Print a representation of the rectangle."""
-        x = self.__width
-        y = self.__height
-        for i in range(y):
-            print('#' * x)
+        width = self.__width
+        height = self.__height
+        x = self.__x
+        y = self.__y
+        print('\n' * y, end='')
+
+        for i in range(height):
+            print(' ' * x + '#' * width)
 
     @staticmethod
     def validateValue(value, value_type):
