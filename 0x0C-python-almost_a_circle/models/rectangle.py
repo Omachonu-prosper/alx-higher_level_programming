@@ -56,6 +56,10 @@ class Rectangle(Base):
         Rectangle.validateValue(value, 'y')
         self.__y = value
 
+    def area(self):
+        """Return the area of the rectangle."""
+        return self.width * self.height
+
     @staticmethod
     def validateValue(value, value_type):
         """Validates the values before instantiation and for setters.
