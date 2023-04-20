@@ -13,10 +13,12 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         self.base1 = Base()
         self.base2 = Base(10)
+        self.base3 = Base()
 
     def test_base_id(self):
         self.assertEqual(self.base1.id, 1)
         self.assertEqual(self.base2.id, 10)
+        self.assertEqual(self.base3.id, 2)
 
     def teatDown(self):
         del self.base1
