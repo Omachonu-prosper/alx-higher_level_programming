@@ -8,6 +8,8 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """Test class for Base class."""
+
     def setUp(self):
         self.base1 = Base()
         self.base2 = Base(10)
