@@ -24,3 +24,18 @@ class TestSquare(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             r.x = {}
+
+    def test_size_getter(self):
+        r = Square(10)
+        self.assertEqual(r.size, 10)
+        r.size = 20
+        self.assertEqual(r.size, 20)
+
+    def test_size_setter(self):
+        r = Square(10)
+        
+        with self.assertRaises(TypeError):
+            r.size = 'a string'
+
+        with self.assertRaises(ValueError):
+            r.size = -5
