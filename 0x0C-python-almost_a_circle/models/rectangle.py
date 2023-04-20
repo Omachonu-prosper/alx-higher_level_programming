@@ -107,6 +107,16 @@ class Rectangle(Base):
             if len(args) > 4:
                 self.y = args[4]
 
+    def to_dictionary(self):
+        rectangle_dict = {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
+        return rectangle_dict
+
     @staticmethod
     def validateValue(value, value_type):
         """Validates the values before instantiation and for setters.

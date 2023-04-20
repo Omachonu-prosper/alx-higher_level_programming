@@ -83,3 +83,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.area(), 6)
         self.assertEqual(r2.area(), 20)
         self.assertEqual(r3.area(), 56)
+
+    def test_to_dictionary(self):
+        r1 = Rectangle(10, 2, 1, 9, 1)
+        self.assertEqual(r1.to_dictionary(), {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
