@@ -89,3 +89,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r1.area(), 9)
         self.assertEqual(r2.area(), 4)
         self.assertEqual(r3.area(), 64)
+
+    def test_to_dictionary(self):
+        r1 = Square(10, 2, 1, 9)
+        self.assertEqual(r1.to_dictionary(), {'id': 9, 'size': 10, 'x': 2, 'y': 1})

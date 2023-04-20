@@ -48,3 +48,13 @@ class Square(Rectangle):
 
             if len(args) > 3:
                 self.y = args[3]
+
+    def to_dictionary(self):
+        """Square instance to dict representation."""
+        square_dict = {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }
+        return square_dict
