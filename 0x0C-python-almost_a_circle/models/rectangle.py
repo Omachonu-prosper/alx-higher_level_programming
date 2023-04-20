@@ -61,6 +61,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """Print a representation of the rectangle."""
         x = self.__width
         y = self.__height
         for i in range(y):
