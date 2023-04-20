@@ -39,3 +39,53 @@ class TestSquare(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             r.size = -5
+
+    def test_valid_update_values(self):
+        r1 = Square(10, 10, 10, 10)
+        self.assertEqual(str(r1), '[Square] (10) 10/10 - 10')
+        
+        r1.update(89)
+        self.assertEqual(str(r1), '[Square] (89) 10/10 - 10')
+        
+        with self.assertRaises(TypeError):
+            r1.update(1, 'a string')
+        
+        with self.assertRaises(TypeError):
+            r1.update(size='a string')
+
+    def test_update_args(self):
+        r1 = Square(10, 10, 10, 10)
+        self.assertEqual(str(r1), '[Square] (10) 10/10 - 10')
+        
+        r1.update(89)
+        self.assertEqual(str(r1), '[Square] (89) 10/10 - 10')
+        
+        r1.update(89, 2)
+        self.assertEqual(str(r1), '[Square] (89) 10/10 - 2')
+        
+        r1.update(89, 2, 3)
+        self.assertEqual(str(r1), '[Square] (89) 3/10 - 2')
+        
+        r1.update(89, 2, 3, 4)
+        self.assertEqual(str(r1), '[Square] (89) 3/4 - 2')
+
+    def test_update_kwargs(self):
+        r1 = Square(10, 10, 10, 10)
+        self.assertEqual(str(r1), '[Square] (10) 10/10 - 10')
+        
+        r1.update(size=1)
+        self.assertEqual(str(r1), '[Square] (10) 10/10 - 1')
+        
+        r1.update(y=1, size=2, x=3, id=89)
+        self.assertEqual(str(r1), '[Square] (89) 3/1 - 2')
+        
+        r1.update(10, x=5, y=5, size=6)
+        self.assertEqual(str(r1), '[Square] (10) 3/1 - 2')
+    
+    def test_area(self):
+        r1 = Square(3)
+        r2 = Square(2)
+        r3 = Square(8, 0, 0, 12)
+        self.assertEqual(r1.area(), 9)
+        self.assertEqual(r2.area(), 4)
+        self.assertEqual(r3.area(), 64)
