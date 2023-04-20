@@ -58,7 +58,13 @@ class Rectangle(Base):
 
     def area(self):
         """Return the area of the rectangle."""
-        return self.width * self.height
+        return self.__width * self.__height
+
+    def display(self):
+        x = self.__width
+        y = self.__height
+        for i in range(y):
+            print('#' * x)
 
     @staticmethod
     def validateValue(value, value_type):
