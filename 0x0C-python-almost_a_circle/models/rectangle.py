@@ -80,22 +80,32 @@ class Rectangle(Base):
         for i in range(height):
             print(' ' * x + '#' * width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the instance attributes."""
-        if len(args) > 0:
-            self.id = args[0]
+        w = self.width
+        h = self.height
 
-        if len(args) > 1:
-            self.__width = args[1]
+        if len(args) == 0:
+            self.id = kwargs['id'] if kwargs.get('id') else self.id
+            self.width = kwargs['width'] if kwargs.get('width') else w
+            self.height = kwargs['height'] if kwargs.get('height') else h
+            self.x = kwargs['x'] if kwargs.get('x') else self.x
+            self.y = kwargs['y'] if kwargs.get('y') else self.y
+        else:
+            if len(args) > 0:
+                self.id = args[0]
 
-        if len(args) > 2:
-            self.__height = args[2]
+            if len(args) > 1:
+                self.width = args[1]
 
-        if len(args) > 3:
-            self.__x = args[3]
+            if len(args) > 2:
+                self.height = args[2]
 
-        if len(args) > 4:
-            self.__y = args[4]
+            if len(args) > 3:
+                self.x = args[3]
+
+            if len(args) > 4:
+                self.y = args[4]
 
     @staticmethod
     def validateValue(value, value_type):
