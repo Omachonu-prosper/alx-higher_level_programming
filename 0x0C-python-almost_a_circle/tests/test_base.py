@@ -26,6 +26,17 @@ class TestBase(unittest.TestCase):
 
         json_dictionary = Base.to_json_string(dictionary)
         self.assertEqual(type(json_dictionary), str)
+    
+    def test_from_json_string(self):
+        list_input = [
+            {'id': 89, 'width': 10, 'height': 4},
+            {'id': 7, 'width': 1, 'height': 7}
+        ]
+        json_list_input = Rectangle.to_json_string(list_input)
+        self.assertEqual(type(json_list_input), str)
+
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(type(list_output), list)
 
     def teatDown(self):
         del self.base1
