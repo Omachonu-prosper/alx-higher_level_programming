@@ -34,7 +34,11 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        obj = cls(1, 1)
+        if dictionary.get('size'):
+            obj = cls(1)
+        else:
+            obj = cls(1, 1)
+            
         obj.update(**dictionary)
         return obj
 
