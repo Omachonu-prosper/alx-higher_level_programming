@@ -24,9 +24,10 @@ class Base:
         filename = '{}.json'.format(cls.__name__)
         dict_list = []
 
-        for obj in list_objs:
-            dict_list.append(obj.to_dictionary())
-        
+        if not (list_objs is None or len(list_objs) == 0):
+            for obj in list_objs:
+                dict_list.append(obj.to_dictionary())
+
         with open(filename, 'w+') as f:
             json_string = Base.to_json_string(dict_list)
             f.write(json_string)
