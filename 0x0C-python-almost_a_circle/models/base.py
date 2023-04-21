@@ -32,6 +32,12 @@ class Base:
             json_string = Base.to_json_string(dict_list)
             f.write(json_string)
 
+    @classmethod
+    def create(cls, **dictionary):
+        obj = cls(1, 1)
+        obj.update(**dictionary)
+        return obj
+
     @staticmethod
     def from_json_string(json_string):
         if json_string is None or len(json_string) == 0:
