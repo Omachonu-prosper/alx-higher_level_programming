@@ -18,6 +18,19 @@ class Base:
         else:
             self.id = id
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Save JSON string to file."""
+        filename = '{}.json'.format(cls.__name__)
+        dict_list = []
+
+        for obj in list_objs:
+            dict_list.append(obj.to_dictionary())
+        
+        with open(filename, 'w+') as f:
+            json_string = Base.to_json_string(dict_list)
+            f.write(json_string)
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Dictionary to JSON string."""
