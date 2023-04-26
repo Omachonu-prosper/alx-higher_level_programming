@@ -1,0 +1,27 @@
+=======================================
+Documentation for 5-text_indentation.py
+=======================================
+
+Import the function we need
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    
+text is a string with indentation characters (:, . and ?)
+    >>> text_indentation('How are: you. What is your name? ')
+    How are:
+    <BLANKLINE>
+    you.
+    <BLANKLINE>
+    What is your name?
+    <BLANKLINE>
+
+text is a number
+    >>> text_indentation(234)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+text is a boolean
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
