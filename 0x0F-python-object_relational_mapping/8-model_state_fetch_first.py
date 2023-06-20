@@ -21,4 +21,5 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     state = engine.execute(select(State)).first()
-    print(f'{state.id}: {state.name}')
+    if state:
+        print(f'{state.id}: {state.name}')
