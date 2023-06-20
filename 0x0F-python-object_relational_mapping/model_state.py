@@ -8,8 +8,8 @@ from sqlalchemy import Column
 from sqlalchemy import String
 from sqlalchemy import Integer
 
-
 Base = declarative_base()
+
 
 class State(Base):
     """User class representing the users table
