@@ -12,9 +12,9 @@ from sqlalchemy import Integer
 Base = declarative_base()
 
 class State(Base):
-	"""User class representing the users table
-	"""
-	__tablename__ = 'states'
+    """User class representing the users table
+    """
+    __tablename__ = 'states'
 
-	id = Column('id', Integer, primary_key=True)
-	name = Column('name', String(128), nullable=False)
+    id = Column('id', Integer, primary_key=True)
+    name = Column('name', String(128), nullable=False)
