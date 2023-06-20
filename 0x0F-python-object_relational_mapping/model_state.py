@@ -19,6 +19,6 @@ class State(Base):
     id = Column('id', Integer, primary_key=True)
     name = Column('name', String(128), nullable=False)
 
-    def __init__(self, id, name):
-        self.id = id
-        self.name = name
+    # def __init__(self, id, name):
+    #     self.id = id
+    #     self.name = name
