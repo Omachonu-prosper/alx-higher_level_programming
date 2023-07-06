@@ -11,7 +11,7 @@ import requests
 
 def main(url, email):
 	req = requests.post(url, data={'email': email})
-	print(req)
+	print(req.text)
 
 
 if __name__ == '__main__':
